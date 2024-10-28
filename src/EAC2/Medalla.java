@@ -25,43 +25,23 @@ public class Medalla {
         atleta.guanyarMedalla(this);
         NumMedallesRepartides++;
      
-    	if (this.posicio = 1) {
-    		return posicio1();
+    	if (this.posicio == 1) {
+    		System.out.println(" Ha guanyat una medalla d'or ");
+    	} else if (this.posicio == 2) {
+    		System.out.println( "Ha guanyat una medalla d'argent" );
+    	} else if (this.posicio == 3) {
+    		System.out.println( "Ha guanyat una medalla de bronze" );
+    	} else { 
+    		System.out.println(" Ha guanyat una medalla no vàlida ");
+    		
     	}
-    	
-    	
+    		
 
   
 }
     	
     
-    
-	private int posicio1(int posicio, Atleta guanyador) {
-		this.posicio = 1;
-		this.atleta = guanyador;
-		atleta.pais.novaMedalla(this);
-		atleta.guanyarMedalla(this);
-		NumMedallesRepartides++;
-		return MEDALLA_OR;
-}
-		
-	private int posicio2(int posicio, Atleta guanyador) {
-		this.posicio = 2;
-		this.atleta = guanyador;
-		atleta.pais.novaMedalla(this);
-		atleta.guanyarMedalla(this);
-		NumMedallesRepartides++;
-		return MEDALLA_ARGENT;
-}
-	private int posicio3(int posicio, Atleta guanyador) {
-		this.posicio = 3;
-		this.atleta = guanyador;
-		atleta.pais.novaMedalla(this);
-		atleta.guanyarMedalla(this);
-		NumMedallesRepartides++;
-		return MEDALLA_BRONZE;
-	}
-
+   
 	public String descripcio() {
 		// TODO Auto-generated method stub
 		return "L'atleta " + atleta.nom + " ha guanyat una medalla en obtenir la posició " + posicio + 
