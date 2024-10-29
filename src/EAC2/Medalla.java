@@ -32,7 +32,7 @@ public class Medalla {
     	} else if (this.posicio == 3) {
     		System.out.println( "Ha guanyat una medalla de bronze" );
     	} else { 
-    		System.out.println(" Ha guanyat una medalla no vàlida ");
+    		System.out.println(" medalla no vàlida ");
     		
     	}
     		
@@ -43,8 +43,35 @@ public class Medalla {
     
    
 	public String descripcio() {
-		// TODO Auto-generated method stub
-		return "L'atleta " + atleta.nom + " ha guanyat una medalla en obtenir la posició " + posicio + 
+		
+		String medalla;
+		
+		switch (posicio) {
+			case 1:
+				
+				medalla = " d'or ";
+				
+				break;
+				
+			case 2:
+				
+				medalla = " d'argent ";
+			
+				break;
+			
+			case 3:
+				medalla = " de bronze ";
+				
+				break;
+			
+			default:
+				medalla = " no vàlida ";
+		
+		
+		
+		}
+		
+		return "L'atleta " + atleta.nom + " ha guanyat una medalla" + medalla + " en obtenir la posició " + posicio + 
 				" a la seva prova de " + atleta.disciplina;
 	
 		
