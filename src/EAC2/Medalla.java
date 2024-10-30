@@ -16,64 +16,54 @@ public class Medalla {
     public static int getNumMedallesRepartides() {
         return NumMedallesRepartides;
     }
-
-    
-    public Medalla(int posicio, Atleta guanyador) {
-        this.posicio = posicio;
+	
+    		
+    	
+	   public Medalla(int posicio, Atleta guanyador) {
+		
+		this.posicio = posicio;
+		   
+		if (this.posicio <= 3 && this.posicio >= 1) {
+        
         this.atleta = guanyador;
         atleta.pais.novaMedalla(this);
         atleta.guanyarMedalla(this);
         NumMedallesRepartides++;
-     
-    	if (this.posicio == 1) {
-    		System.out.println(" Ha guanyat una medalla d'or ");
-    	} else if (this.posicio == 2) {
-    		System.out.println( "Ha guanyat una medalla d'argent" );
-    	} else if (this.posicio == 3) {
-    		System.out.println( "Ha guanyat una medalla de bronze" );
-    	} else { 
-    		System.out.println(" medalla no vàlida ");	
-    	}
-  
-}
-    	
-    String medalla; {
-	
-	switch (posicio) {
-		case 1:
-			
-			medalla = " d'or ";
-			
-			break;
-			
-		case 2:
-			
-			medalla = " d'argent ";
+	   
+		}
+	 }
+
+	public String descripcio() {
 		
-			break;
-		
-		case 3:
-			medalla = " de bronze ";
+		if (this.posicio <= 3 && this.posicio >= 1) {
 			
-			break;
+			String medalla = null; 
+			
+			switch (posicio) {
+				case 1:
+					
+					medalla = " d'or ";
+					
+					break;
+					
+				case 2:
+					
+					medalla = " d'argent ";
+				
+					break;
+				
+				case 3:
+					medalla = " de bronze ";
+					
+					break;	
+			
+				}
+			
+		return "L'atleta " + atleta.nom +  " ha guanyat una medalla" + medalla + " en obtenir la posició " + posicio + 
+					" a la seva prova de " + atleta.disciplina;
 		
-		default:
-			medalla = " no vàlida ";
+		}
+		return " Medalla no vàlida ";
 		
 		}
 	}
-   
-	public String descripcio() {
-		
-		return "L'atleta " + atleta.nom + " ha guanyat una medalla" + medalla + " en obtenir la posició " + posicio + 
-				" a la seva prova de " + atleta.disciplina;
-	
-		
-	
-	
-	
-	}
-
-
-
-}
